@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nina.vazae\\empty\\Empty\\Empty.csproj": {}
+    "C:\\Users\\nina.vazae\\project-empty\\Empty\\Empty.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nina.vazae\\empty\\Empty\\Empty.csproj": {
+    "C:\\Users\\nina.vazae\\project-empty\\Empty\\Empty.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nina.vazae\\empty\\Empty\\Empty.csproj",
+        "projectUniqueName": "C:\\Users\\nina.vazae\\project-empty\\Empty\\Empty.csproj",
         "projectName": "Empty",
-        "projectPath": "C:\\Users\\nina.vazae\\empty\\Empty\\Empty.csproj",
+        "projectPath": "C:\\Users\\nina.vazae\\project-empty\\Empty\\Empty.csproj",
         "packagesPath": "C:\\Users\\nina.vazae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nina.vazae\\empty\\Empty\\obj\\",
+        "outputPath": "C:\\Users\\nina.vazae\\project-empty\\Empty\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nina.vazae\\AppData\\Roaming\\NuGet\\NuGet.Config",
