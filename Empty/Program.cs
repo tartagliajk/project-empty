@@ -13,6 +13,10 @@ namespace Empty
         static string option_spawner_chests;
         static string option_chests_return;
         static string option_lava_dig;
+        static string option_left_right;
+        static string option_cave_library;
+        static string option_open_book;
+        static string option_strange_storage;
         /*Console.Write(""); Console.ReadLine för att få input på samma linje som output*/
         /* naming variables https://www.informit.com/articles/article.aspx?p=24472
          * tolower() https://www.geeksforgeeks.org/c-sharp-tolower-method/
@@ -130,10 +134,10 @@ namespace Empty
                 Console.WriteLine("With a hasty motion the player raises its axe and chops the opponents.");
             }if(option_weapon == "bow")
             {
-                Console.WriteLine("Arrow in íts hand. Putting it next to the bow string. A sound of arrow swoshing past and into the opponents soul.");
+                Console.WriteLine("Arrow in íts hand.\nPutting it next to the bow string.\nA sound of arrow swoshing past and into the opponents soul.");
             }if(option_weapon == "crossbow")
             {
-                Console.WriteLine("The arrow has been loaded. The player charge press the fire button.");
+                Console.WriteLine("The arrow has been loaded.\nThe player charge press the fire button.");
             }
             Console.WriteLine("Lifeless powder on the ground.\nThe player picks some of it up.\n");
         }
@@ -184,13 +188,13 @@ namespace Empty
                     break;
                 }if(option_lava_dig.ToLower() == "dig")
                 {
-                    Console.WriteLine("One block, Two blocks, Three blocks, Four blocks.\nThe smell of ash made it hard to breathe in the limited area.\nPig? Man? Pigman? King?\nThe player looked at it.\nIt had a bloody robe.\nCrown? With some jewels on.");
-                    Console.Read();
+                    Console.WriteLine("\nOne block, Two blocks, Three blocks, Four blocks.\nThe smell of ash made it hard to breathe in the limited area.\nPig? Man? Pigman? King?\nThe player looked at it.\nIt had a bloody robe.\nCrown? With some jewels on.");
+                    Console.ReadLine();
                     Console.WriteLine("Red, green, blue, purple.\nIt looked at the player.\nNodded and reached out a hand.\nThe player looked at it.\nHesitant the player gave it its hand.\nThe pigman walked with confident steps towards a tunnel.\n");
-                    Console.WriteLine("It signalled that the player should go through the tunnel.\nThe player walked towards it. \nIt looked at the player with a smile and it took off its crown. \nIt held it towards the player.");
+                    Console.WriteLine("It signalled that the player should go through the tunnel.\nThe player walked towards it.\nIt looked at the player with a smile and it took off its crown. \nIt held it towards the player.");
                     Console.WriteLine("The player bowed and the pigman put the crown on the player's head.\nIt waved a hand towards the tunnel.\n“Don’t look back,” it said.");
-                    Console.Read();
-                    Console.WriteLine("\nThe player walked through the tunnel not daring to look back.\\nPurple blue light shines through the tunnel.");
+                    Console.ReadLine();
+                    Console.WriteLine("\nThe player walked through the tunnel not daring to look back.\nPurple blue light shines through the tunnel.");
                     Console.WriteLine("The player walks through the portal, it wanted to look back but didn’t have the courage to do it. \nInstead it took off the brown and held it closer so it could get a better view.");
                     Console.WriteLine("On the band inside the crown there was text.\nIt could not read it.\nIt put the crown back on its head and looked at the surroundings.\n");
                     stronghold();
@@ -202,6 +206,71 @@ namespace Empty
         {
             Console.WriteLine("------------------------------------------------------------------------------");
             Console.WriteLine("Stone. Stone bricks. Stonewalls.\nTwo paths. Left. Right.\n");
+            Console.Write("Does the player take the left or the right? [Left / Right]\n>");
+            while (true)
+            {
+                option_left_right = Console.ReadLine();
+                if(option_left_right.ToLower() == "left")
+                {
+                    Console.WriteLine("At the end of the path there are two ways.\nThe left one leads to a cave and the other to a library.\n");
+                    Console.Write("Does the player go to the cave or the library? [Cave / library]\n>");
+                    while (true)
+                    {
+                        option_cave_library = Console.ReadLine();
+                        if(option_cave_library.ToLower() == "cave")
+                        {
+                            Console.WriteLine("\nThe darkness wraps around the player.\nOne step. Two steps. Three steps, Four steps. Five steps.\n“tsk…”\n“tsk…”\nLight.\nDarkness.\n“Failure” it thought as a high pitched sound made it deaf.\n“Back to black”\nDeath\n");
+                            break;
+                        }if(option_cave_library.ToLower() == "library")
+                        {
+                            Console.WriteLine("Books upon books.\nTaller than the player could reach.\nIn the middle of the room there is a book.\nShining a red flame.\nThe player senses a feeling of familiarity.\n");
+                            Console.Write("Does the player open the book? [Yes / No]\n>");
+                            while (true)
+                            {
+                                option_open_book = Console.ReadLine();
+                                if(option_open_book.ToLower() == "no")
+                                {
+                                    Console.WriteLine("\nMaybe it's best to let it be.");
+                                    portalroom();
+                                    break;
+                                }if(option_open_book.ToLower() == "yes")
+                                {
+                                    Console.WriteLine("\nIt walks up to the book.\nTake a closer look.\n“Art of war” the book says.\nThe player opens the book.\nSkips a few pages until it stops.\nThe player can’t continue.\nWith golden letters it says:\n");
+                                    Console.Read();
+                                    Console.WriteLine("“Thus the crown of your, once belonged to a king”\n“The king ruled over the ash land”\n“Some might argue he was a kind ruler, though some say he was cruel.”\n“But when the crown is passed down, the king falls”\n“He last wish shall stand like stone”\n“Within the crown the name of the king stands”\n“Thus language might be a problem, but shall not be anymore”\n");
+                                    Console.Read();
+                                    Console.WriteLine("The player takes off the crown once again.\nIt looks inside the crown where the text once was.\nThe golden text starts to change form and now the player can read it.\n“Emperor T.”\nA tear drops as the player puts the crown back on its head.\n");
+                                    portalroom();
+                                    break;
+                                }
+                            }
+                        }break;
+                    }
+
+                }if(option_left_right.ToLower() == "right")
+                {
+                    Console.WriteLine("\nAt the end of the path there are two ways.\nThe left one leads to a strange room and the other to a storage room.\n");
+                    Console.Write("Does the player go to the strange room or the storage? [Strange / Storage]\n>");
+                    while (true)
+                    {
+                        option_strange_storage = Console.ReadLine();
+                        if(option_strange_storage.ToLower() == "strange")
+                        {
+                            portalroom();
+                            break;
+                        }if(option_strange_storage.ToLower() == "storage")
+                        {
+                            Console.WriteLine("Storage room.\nChests, barrels.\nSounds of carts echo in the room.\nSome have hoppers on them.\nOthers have furnaces in them.\nBig signs indicate what stuff is where.\nA bit too sorted for the player.\nNot wanting to destroy anything the player leaves.\n");
+                            portalroom();
+                            break;
+                        }
+                    }
+                }break;
+            }
+
+        }
+        static void portalroom()
+        {
 
         }
     }
