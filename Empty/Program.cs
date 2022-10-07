@@ -184,7 +184,9 @@ namespace Empty
                 option_lava_dig = Console.ReadLine();
                 if(option_lava_dig.ToLower() == "lava")
                 {
-                    Console.WriteLine("One block, Two blocks, Three blocks, Four blocks.\nMisplaced.\nIt falls from its own creation.\n“Failure” it thought as the lava wrapped around it.\n“Back to black”.\nDeath.");
+                    Console.WriteLine("One block, Two blocks, Three blocks, Four blocks.\nMisplaced.\nIt falls from its own creation.\n“Failure” it thought as the lava wrapped around it.\n“Back to black”.");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("D e a t h");
                     break;
                 }if(option_lava_dig.ToLower() == "dig")
                 {
@@ -219,7 +221,9 @@ namespace Empty
                         option_cave_library = Console.ReadLine();
                         if(option_cave_library.ToLower() == "cave")
                         {
-                            Console.WriteLine("\nThe darkness wraps around the player.\nOne step. Two steps. Three steps, Four steps. Five steps.\n“tsk…”\n“tsk…”\nLight.\nDarkness.\n“Failure” it thought as a high pitched sound made it deaf.\n“Back to black”\nDeath\n");
+                            Console.WriteLine("\nThe darkness wraps around the player.\nOne step. Two steps. Three steps, Four steps. Five steps.\n“tsk…”\n“tsk…”\nLight.\nDarkness.\n“Failure” it thought as a high pitched sound made it deaf.\n“Back to black”\n");
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("D e a t h");
                             break;
                         }if(option_cave_library.ToLower() == "library")
                         {
@@ -270,6 +274,13 @@ namespace Empty
 
         }
         static void portalroom()
+        {
+            Console.WriteLine("The player looks down from a balcony.\nTo the left there is a staircase leading down to a strange looking portal.\nWaterfalls coming from the cave tops leading down to the purple void.\nThe player can see some trees and grass surrounding the portal.\nIt walks on the purple carpet leading to the portal.\n");
+            Console.WriteLine("Look at it.\nA deep breath.\nPuts down the eye of enders.\nIt looks at the portal and jumps in it.\n");
+            end();
+
+        }
+        static void end()
         {
 
         }
