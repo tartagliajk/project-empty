@@ -17,6 +17,7 @@ namespace Empty
         static string option_cave_library;
         static string option_open_book;
         static string option_strange_storage;
+        static string option_near_far;
         /*Console.Write(""); Console.ReadLine för att få input på samma linje som output*/
         /* naming variables https://www.informit.com/articles/article.aspx?p=24472
          * tolower() https://www.geeksforgeeks.org/c-sharp-tolower-method/
@@ -185,8 +186,7 @@ namespace Empty
                 if(option_lava_dig.ToLower() == "lava")
                 {
                     Console.WriteLine("One block, Two blocks, Three blocks, Four blocks.\nMisplaced.\nIt falls from its own creation.\n“Failure” it thought as the lava wrapped around it.\n“Back to black”.");
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("D e a t h");
+                    deathmessage();
                     break;
                 }if(option_lava_dig.ToLower() == "dig")
                 {
@@ -222,8 +222,7 @@ namespace Empty
                         if(option_cave_library.ToLower() == "cave")
                         {
                             Console.WriteLine("\nThe darkness wraps around the player.\nOne step. Two steps. Three steps, Four steps. Five steps.\n“tsk…”\n“tsk…”\nLight.\nDarkness.\n“Failure” it thought as a high pitched sound made it deaf.\n“Back to black”\n");
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("D e a t h");
+                            deathmessage();
                             break;
                         }if(option_cave_library.ToLower() == "library")
                         {
@@ -278,11 +277,62 @@ namespace Empty
             Console.WriteLine("The player looks down from a balcony.\nTo the left there is a staircase leading down to a strange looking portal.\nWaterfalls coming from the cave tops leading down to the purple void.\nThe player can see some trees and grass surrounding the portal.\nIt walks on the purple carpet leading to the portal.\n");
             Console.WriteLine("Look at it.\nA deep breath.\nPuts down the eye of enders.\nIt looks at the portal and jumps in it.\n");
             end();
+            Console.ReadLine();
 
         }
         static void end()
         {
+            Console.WriteLine("------------------------------------------------------------------------------");
+            Console.WriteLine("The player looks around.\nIt sees a big island floating over emptiness and  it can glimpse smaller islands.\nBut between the big island and the smaller ones are void.\n");
+            Console.WriteLine("The material that builds the islands seems weird to the player.\nNo water can be spotted.\nNo daylight cycle.\nLimited by some living organisms.");
+            Console.WriteLine("\nThe player decides to build a bridge towards the island.\nOne block. Two blocks. Three blocks.\n“Weird material” it murmurs to itself.\n");
+            Console.WriteLine("As the player looks up, it’s greeted with 10 obsidian towers with a floating crystal on the top.\nA dragon is flying in the sky.\n“It’s probably the ruler in this dimension” the player thought.\n");
+            if (option_weapon == "bow" || option_weapon == "crossbow")
+            {
+                Console.WriteLine("The player decides to shoot at the crystals which resulted in them exploding.\nOne after one they explode.\nUntil there is only one left.\nBoom.\n");
+            }if(option_weapon == "axe" || option_weapon == "sword")
+            {
+                Console.WriteLine("With the only option building up to destroy the crystals.\nAs the player builds up the more the ground gets dimmed.\nLast block.\n");
+                Console.Write("Does the player stand far away from the crystal or near it? [Far / Near]\n>");
+                while (true)
+                {
+                    option_near_far = Console.ReadLine();
+                    if(option_near_far.ToLower() == "near")
+                    {
+                        Console.WriteLine("It walks near the crystal.\nThe crystal is shaped like a polyhedron and has a purple centre with text written on it.\nAs the player hits it.\nA light beam shines from the crystal.\n");
+                        Console.WriteLine("No explosion was heard.\n“Failure” it thought as the darkness wrapped around it.\n“Back to black”");
+                        deathmessage();
+                        break;
+                    }
+                    if(option_near_far.ToLower() == "far")
+                    {
+                        Console.WriteLine("The player decides to stand away from the crystal.\nThough it can be depicted that the crystal is shaped like a polyhedron and has a purple centre with text written on it.\nAs the player hits it.\n");
+                        Console.WriteLine("A light beam shines from the crystal.\nAn explosion was heard.\nQuickly the player made its way down the tower.\n");
+                        Console.WriteLine("As the dragon gets closer to the ground the player rushes towards the middle.\nEvery second counted.\nAs the dragon was about to land, the player struck.\nA purple/pink light shines from the dragon and as it elevates towards the sky it explodes and tiny green particles land on the ground.\n");
+                        outro();
+                        Console.ReadLine();
+                        break;
 
+                    }
+                }
+            }
+        }
+
+        static void outro()
+        {
+            Console.WriteLine("------------------------------------------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("You are the player, reading words…\nSometimes it believed it was in a universe that was made of energy that was made of offs and ons; zeros and ones; lines of code.\nSometimes it believed it was playing a game.\n");
+            Console.WriteLine("Sometimes it believed it was reading words on a screen.\nShush... Sometimes the player read lines of code on a screen.\n");
+            Console.WriteLine("Decoded them into words; decoded words into meaning; decoded meaning into feelings, emotions, theories, ideas, and the player started to breathe faster and deeper and realised it was alive, it was alive, those thousand deaths had not been real, the player was alive\n");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("You. You. You are alive.\nYou are the player.\nWake up.");
+        }
+
+        static void deathmessage()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("D E A T H");
         }
     }
 }
