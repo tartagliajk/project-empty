@@ -5,19 +5,6 @@ namespace Empty
 {
     internal class Program
     {
-
-        static string option_village_trees;
-        static string option_village_tools;
-        static string option_smith_range;
-        static string option_weapon;
-        static string option_spawner_chests;
-        static string option_chests_return;
-        static string option_lava_dig;
-        static string option_left_right;
-        static string option_cave_library;
-        static string option_open_book;
-        static string option_strange_storage;
-        static string option_near_far;
         /*Console.Write(""); Console.ReadLine för att få input på samma linje som output*/
         /* naming variables https://www.informit.com/articles/article.aspx?p=24472
          * tolower() https://www.geeksforgeeks.org/c-sharp-tolower-method/
@@ -27,312 +14,27 @@ namespace Empty
 
         static void Main(string[] args)
         {
-            Console.Write("Welcome to Empty, click enter to continue.");
-            Console.Read();
-            Intro();
-            Console.Read();
-            Spawn();
-            Console.Read();
-            Village();
-            Console.Read();
-            Nether();
-        }
-
-        static void Intro()
-        {
-            Console.WriteLine("------------------------------------------------------------------------------\n");
-            Console.WriteLine("The world is loading.\nEvery block is being placed.\nTrees and oceans are creating.\nEverything is simply being built up.\nNow it's the player's time to either set a footprint or to be forgotten.");
-            Console.WriteLine("\n------------------------------------------------------------------------------");
-            Console.Read();
-        }
-
-        static void Spawn()
-        {
-            Console.WriteLine("Sunrise... something the player hasn't experienced in ages.\nSomething so beautiful but yet so wrong.\nThe player looks around.\nThe player spots a village from a distance.");
-            Console.Write("\nDoes the player wither go to the village or get some trees? [Village / Trees]\n>");
-            while (true)
-            {
-                option_village_trees = Console.ReadLine();
-                if(option_village_trees.ToLower() == "trees")
-                {
-                    Console.WriteLine("\nThe player has never seen trees this tall.\nIs it the player that is short or is it the trees that are tall?");
-                    Console.Write("\nDoes the player want to make tools or go to the village? [Village / Tools]\n>");
-                    while (true)
-                    {
-                        option_village_tools = Console.ReadLine();
-                        if(option_village_tools.ToLower() == "tools")
-                        {
-                            Console.WriteLine("\nPicaxe? Shovel? Hoe?\nSomehow the player still remembers how to create them.\nThe player looks at the creation.\nTurns it...");
-                            break;
-                        }if(option_village_tools.ToLower() == "village")
-                        {
-                            break;
-                        }
-                    }break;
-                }if(option_village_trees.ToLower() == "village")
-                {
-                    Console.WriteLine("\nThe player decides to explore a bit but it doesn't find anything useful.");
-                    break;
-                }
-            }
-            Console.WriteLine("\nIt looks up to the sky.\nIt's getting late.\nIt heads towards the village.");
-            Console.WriteLine("------------------------------------------------------------------------------");
-        }
-
-        static void Village()
-        {
-            Console.WriteLine("Sunset.\nA mix of pink and blue starts to emerge onto the sky.\nFrom a distance the player spots a tree.\nThe player decides to make a temporary base there for the night.\nA tent.\nA roof over the head.\nNight.\nQuietness, darkness, stars that sparkle.");
-            Console.WriteLine("...\n...\n...");
-            Console.WriteLine("\nSunrise.\nThe player stands.\nThe village bell starts to ring.\nr i n g   r i n g \nVillagers walk out from the house.\nReady to work, ready to repeat their daily chores.\n");
-            Console.Write("Does the player go to the weapon smith or the archer range? [Smith / Range]\n>");
-            while (true){
-                option_smith_range = Console.ReadLine();
-                if(option_smith_range.ToLower() == "range") {
-                    Console.WriteLine("\nsteps. steps. steps.\nBow meets air.\nTsurune.\nThe player hears the arrow being released.\nCutting through air.\nThe villager says something.\nWords that don't mean anything.\nThe player points at the…\n");
-                    Console.Write("Bow or Crossbow?\n>");
-                    while (true)
-                    {
-                        option_weapon = Console.ReadLine();
-                        if(option_weapon.ToLower() == "bow")
-                        {
-                            Console.WriteLine("\nQuick.\nEasy to use.\nPrecise.\n");
-                            break;
-                        }if(option_weapon.ToLower() == "crossbow")
-                        {
-                            Console.WriteLine("\nSlow.\nuntrustworthy.\n");
-                            break;
-                        }
-                    }break;
-                }if(option_smith_range.ToLower() == "smith")
-                {
-                    Console.WriteLine("\nsteps. steps. steps.\nMetal meets metal.\nThe player hears loud clings.\nThe villager says something.\nWords that don't mean anything.\nThe player points…\n");
-                    Console.Write("Sword or Axe\n>");
-                    while (true)
-                    {
-                        option_weapon = Console.ReadLine();
-                        if(option_weapon.ToLower() == "sword")
-                        {
-                            Console.WriteLine("\nSharp.\nHandle.\nEasy to cut.\nBut yet so weak.\n");
-                            break;
-                        }if(option_weapon.ToLower() == "axe")
-                        {
-                            Console.WriteLine("\nHeavy.\nSlow.\nGreat damage.\n");
-                            break;
-                        }
-                    }break;
-                }
-            }Console.WriteLine("The villager points towards the city centre.\nTall purple portal.\nIt’s secured.\nRisk?\nYes.\nThe player runs towards the portal.\nOver the guards it goes.\nInto the portal it goes.");
-        }
-
-        static void Spawner_fight()
-        {
-            Console.WriteLine("\nBurning beings.\nWho gave powders.\nThe player walks with definite steps.");
-            if(option_weapon == "sword")
-            {
-                Console.WriteLine("The player rise its sword and swing it at the enemies.");
-            }if(option_weapon == "axe")
-            {
-                Console.WriteLine("With a hasty motion the player raises its axe and chops the opponents.");
-            }if(option_weapon == "bow")
-            {
-                Console.WriteLine("Arrow in íts hand.\nPutting it next to the bow string.\nA sound of arrow swoshing past and into the opponents soul.");
-            }if(option_weapon == "crossbow")
-            {
-                Console.WriteLine("The arrow has been loaded.\nThe player charge press the fire button.");
-            }
-            Console.WriteLine("Lifeless powder on the ground.\nThe player picks some of it up.\n");
-        }
-        static void Chest_Room()
-        {
-            Console.WriteLine("\nChestroom.\nThe player finds gold, diamonds, rubies, emeralds etc.\nBut nothing useful.\nSo it puts everything back.");
-        }
-        static void Nether()
-        {
-            Console.WriteLine("------------------------------------------------------------------------------");
-            Console.WriteLine("Heat.\nHugging the player.\nAsh, some even might say it’s comforting.\nThick air.\nNot far away the player spots a building.\nThe fortress, which they have heard about before.\nThe player crosses the lava.\nA building.\nTwo ways.\n");
-            Console.Write("Does the player want to go to the spawner or explore chests? [Spawner / Chests]\n>");
-            while (true)
-            {
-                option_spawner_chests = Console.ReadLine();
-                if(option_spawner_chests.ToLower() == "spawner")
-                {
-                    Spawner_fight();
-                    Console.Write("Does the player want to explore the chestroom or return back? [Chests / Return]\n>");
-                    while (true)
-                    {
-                        option_chests_return = Console.ReadLine();
-                        if(option_chests_return.ToLower() == "chests")
-                        {
-                            Chest_Room();
-                            break;
-                        }if(option_chests_return.ToLower() == "return")
-                        {
-                            break;
-                        }
-                    }
-                    break;
-                }if(option_spawner_chests.ToLower() == "chests")
-                {
-                    Chest_Room();
-                    Console.WriteLine("Still in need of the powder, the player walks towards the spawner.");
-                    Spawner_fight();
-                    break;
-                }
-            }
-            Console.Write("\nDoes it bridge over the lava or does the player dig its way through? [Lava / Dig]\n>");
-            while (true)
-            {
-                option_lava_dig = Console.ReadLine();
-                if(option_lava_dig.ToLower() == "lava")
-                {
-                    Console.WriteLine("One block, Two blocks, Three blocks, Four blocks.\nMisplaced.\nIt falls from its own creation.\n“Failure” it thought as the lava wrapped around it.\n“Back to black”.");
-                    deathmessage();
-                    break;
-                }if(option_lava_dig.ToLower() == "dig")
-                {
-                    Console.WriteLine("\nOne block, Two blocks, Three blocks, Four blocks.\nThe smell of ash made it hard to breathe in the limited area.\nPig? Man? Pigman? King?\nThe player looked at it.\nIt had a bloody robe.\nCrown? With some jewels on.");
-                    Console.ReadLine();
-                    Console.WriteLine("Red, green, blue, purple.\nIt looked at the player.\nNodded and reached out a hand.\nThe player looked at it.\nHesitant the player gave it its hand.\nThe pigman walked with confident steps towards a tunnel.\n");
-                    Console.WriteLine("It signalled that the player should go through the tunnel.\nThe player walked towards it.\nIt looked at the player with a smile and it took off its crown. \nIt held it towards the player.");
-                    Console.WriteLine("The player bowed and the pigman put the crown on the player's head.\nIt waved a hand towards the tunnel.\n“Don’t look back,” it said.");
-                    Console.ReadLine();
-                    Console.WriteLine("\nThe player walked through the tunnel not daring to look back.\nPurple blue light shines through the tunnel.");
-                    Console.WriteLine("The player walks through the portal, it wanted to look back but didn’t have the courage to do it. \nInstead it took off the brown and held it closer so it could get a better view.");
-                    Console.WriteLine("On the band inside the crown there was text.\nIt could not read it.\nIt put the crown back on its head and looked at the surroundings.\n");
-                    stronghold();
-                    break;
-                }
-            }
-        }
-        static void stronghold()
-        {
-            Console.WriteLine("------------------------------------------------------------------------------");
-            Console.WriteLine("Stone. Stone bricks. Stonewalls.\nTwo paths. Left. Right.\n");
-            Console.Write("Does the player take the left or the right? [Left / Right]\n>");
-            while (true)
-            {
-                option_left_right = Console.ReadLine();
-                if(option_left_right.ToLower() == "left")
-                {
-                    Console.WriteLine("At the end of the path there are two ways.\nThe left one leads to a cave and the other to a library.\n");
-                    Console.Write("Does the player go to the cave or the library? [Cave / library]\n>");
-                    while (true)
-                    {
-                        option_cave_library = Console.ReadLine();
-                        if(option_cave_library.ToLower() == "cave")
-                        {
-                            Console.WriteLine("\nThe darkness wraps around the player.\nOne step. Two steps. Three steps, Four steps. Five steps.\n“tsk…”\n“tsk…”\nLight.\nDarkness.\n“Failure” it thought as a high pitched sound made it deaf.\n“Back to black”\n");
-                            deathmessage();
-                            break;
-                        }if(option_cave_library.ToLower() == "library")
-                        {
-                            Console.WriteLine("Books upon books.\nTaller than the player could reach.\nIn the middle of the room there is a book.\nShining a red flame.\nThe player senses a feeling of familiarity.\n");
-                            Console.Write("Does the player open the book? [Yes / No]\n>");
-                            while (true)
-                            {
-                                option_open_book = Console.ReadLine();
-                                if(option_open_book.ToLower() == "no")
-                                {
-                                    Console.WriteLine("\nMaybe it's best to let it be.");
-                                    portalroom();
-                                    break;
-                                }if(option_open_book.ToLower() == "yes")
-                                {
-                                    Console.WriteLine("\nIt walks up to the book.\nTake a closer look.\n“Art of war” the book says.\nThe player opens the book.\nSkips a few pages until it stops.\nThe player can’t continue.\nWith golden letters it says:\n");
-                                    Console.Read();
-                                    Console.WriteLine("“Thus the crown of your, once belonged to a king”\n“The king ruled over the ash land”\n“Some might argue he was a kind ruler, though some say he was cruel.”\n“But when the crown is passed down, the king falls”\n“He last wish shall stand like stone”\n“Within the crown the name of the king stands”\n“Thus language might be a problem, but shall not be anymore”\n");
-                                    Console.Read();
-                                    Console.WriteLine("The player takes off the crown once again.\nIt looks inside the crown where the text once was.\nThe golden text starts to change form and now the player can read it.\n“Emperor T.”\nA tear drops as the player puts the crown back on its head.\n");
-                                    portalroom();
-                                    break;
-                                }
-                            }
-                        }break;
-                    }
-
-                }if(option_left_right.ToLower() == "right")
-                {
-                    Console.WriteLine("\nAt the end of the path there are two ways.\nThe left one leads to a strange room and the other to a storage room.\n");
-                    Console.Write("Does the player go to the strange room or the storage? [Strange / Storage]\n>");
-                    while (true)
-                    {
-                        option_strange_storage = Console.ReadLine();
-                        if(option_strange_storage.ToLower() == "strange")
-                        {
-                            portalroom();
-                            break;
-                        }if(option_strange_storage.ToLower() == "storage")
-                        {
-                            Console.WriteLine("Storage room.\nChests, barrels.\nSounds of carts echo in the room.\nSome have hoppers on them.\nOthers have furnaces in them.\nBig signs indicate what stuff is where.\nA bit too sorted for the player.\nNot wanting to destroy anything the player leaves.\n");
-                            portalroom();
-                            break;
-                        }
-                    }
-                }break;
-            }
-
-        }
-        static void portalroom()
-        {
-            Console.WriteLine("The player looks down from a balcony.\nTo the left there is a staircase leading down to a strange looking portal.\nWaterfalls coming from the cave tops leading down to the purple void.\nThe player can see some trees and grass surrounding the portal.\nIt walks on the purple carpet leading to the portal.\n");
-            Console.WriteLine("Look at it.\nA deep breath.\nPuts down the eye of enders.\nIt looks at the portal and jumps in it.\n");
-            end();
+            Console.WriteLine("Welcome to Empty, click enter to continue.");
+            intro();
             Console.ReadLine();
-
+            Spawn.room();
+            Console.ReadLine();
+            Village.room();
+            Console.ReadLine();
+            Nether.room();
         }
-        static void end()
+
+        static void intro()
         {
             Console.WriteLine("------------------------------------------------------------------------------");
-            Console.WriteLine("The player looks around.\nIt sees a big island floating over emptiness and  it can glimpse smaller islands.\nBut between the big island and the smaller ones are void.\n");
-            Console.WriteLine("The material that builds the islands seems weird to the player.\nNo water can be spotted.\nNo daylight cycle.\nLimited by some living organisms.");
-            Console.WriteLine("\nThe player decides to build a bridge towards the island.\nOne block. Two blocks. Three blocks.\n“Weird material” it murmurs to itself.\n");
-            Console.WriteLine("As the player looks up, it’s greeted with 10 obsidian towers with a floating crystal on the top.\nA dragon is flying in the sky.\n“It’s probably the ruler in this dimension” the player thought.\n");
-            if (option_weapon == "bow" || option_weapon == "crossbow")
-            {
-                Console.WriteLine("The player decides to shoot at the crystals which resulted in them exploding.\nOne after one they explode.\nUntil there is only one left.\nBoom.\n");
-            }if(option_weapon == "axe" || option_weapon == "sword")
-            {
-                Console.WriteLine("With the only option building up to destroy the crystals.\nAs the player builds up the more the ground gets dimmed.\nLast block.\n");
-                Console.Write("Does the player stand far away from the crystal or near it? [Far / Near]\n>");
-                while (true)
-                {
-                    option_near_far = Console.ReadLine();
-                    if(option_near_far.ToLower() == "near")
-                    {
-                        Console.WriteLine("It walks near the crystal.\nThe crystal is shaped like a polyhedron and has a purple centre with text written on it.\nAs the player hits it.\nA light beam shines from the crystal.\n");
-                        Console.WriteLine("No explosion was heard.\n“Failure” it thought as the darkness wrapped around it.\n“Back to black”");
-                        deathmessage();
-                        break;
-                    }
-                    if(option_near_far.ToLower() == "far")
-                    {
-                        Console.WriteLine("The player decides to stand away from the crystal.\nThough it can be depicted that the crystal is shaped like a polyhedron and has a purple centre with text written on it.\nAs the player hits it.\n");
-                        Console.WriteLine("A light beam shines from the crystal.\nAn explosion was heard.\nQuickly the player made its way down the tower.\n");
-                        Console.WriteLine("As the dragon gets closer to the ground the player rushes towards the middle.\nEvery second counted.\nAs the dragon was about to land, the player struck.\nA purple/pink light shines from the dragon and as it elevates towards the sky it explodes and tiny green particles land on the ground.\n");
-                        outro();
-                        Console.ReadLine();
-                        break;
-
-                    }
-                }
-            }
-        }
-
-        static void outro()
-        {
+            Console.WriteLine("The world is loading.");
+            Console.WriteLine("Every block is being placed.");
+            Console.WriteLine("Trees and oceans are creating.");
+            Console.WriteLine("Everything is simply being built up.");
+            Console.WriteLine("Now it's the player's time to either set a footprint or to be forgotten.");
             Console.WriteLine("------------------------------------------------------------------------------");
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("You are the player, reading words…\nSometimes it believed it was in a universe that was made of energy that was made of offs and ons; zeros and ones; lines of code.\nSometimes it believed it was playing a game.\n");
-            Console.WriteLine("Sometimes it believed it was reading words on a screen.\nShush... Sometimes the player read lines of code on a screen.\n");
-            Console.WriteLine("Decoded them into words; decoded words into meaning; decoded meaning into feelings, emotions, theories, ideas, and the player started to breathe faster and deeper and realised it was alive, it was alive, those thousand deaths had not been real, the player was alive\n");
-            Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine("You. You. You are alive.\nYou are the player.\nWake up.");
+            Console.Read();
         }
 
-        static void deathmessage()
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("D E A T H");
-        }
-    }
+    } 
 }
