@@ -15,6 +15,7 @@ namespace Empty
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Empty, click enter to continue.");
+            Console.ReadLine();
             intro();
             Console.ReadLine();
             Spawn.room();

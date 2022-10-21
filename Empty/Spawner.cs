@@ -21,13 +21,16 @@ namespace Empty
             }
             if (Village.weapon == "bow")
             {
-                Console.WriteLine("Arrow in íts hand.\nPutting it next to the bow string.\nA sound of arrow swoshing past and into the opponents soul.");
+                Console.WriteLine("Arrow in íts hand.");
+                Console.WriteLine("Putting it next to the bow string.");
+                Console.WriteLine("A sound of arrow swoshing past and into the opponents soul.");
             }
             if (Village.weapon == "crossbow")
             {
-                Console.WriteLine("The arrow has been loaded.\nThe player charge press the fire button.");
+                Console.WriteLine("The arrow has been loaded.");
+                Console.WriteLine("The player charge press the fire button.");
             }
-            Console.WriteLine("Lifeless powder on the ground.\nThe player picks some of it up.\n");
+            Console.WriteLine("Lifeless powder on the ground.\nThe player picks some of it up.");
         }
     }
 }

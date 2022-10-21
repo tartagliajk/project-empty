@@ -36,11 +36,10 @@ namespace Empty
                             Console.WriteLine("Light.\nDarkness.");
                             Console.WriteLine("“Failure” it thought as a high pitched sound made it deaf.");
                             Console.WriteLine("“Back to black”");
-
                             Death.message();
                             break;
                         }
-                        if (cave_library.ToLower() == "library")
+                        if (direction.ToLower() == "library")
                         {
                             Console.WriteLine("Books upon books.");
                             Console.WriteLine("Taller than the player could reach.");
@@ -86,8 +85,7 @@ namespace Empty
                                 }
                             }
                         }
-                        break;
-                    }
+                    }break;
 
                 }
                 if (direction.ToLower() == "right")

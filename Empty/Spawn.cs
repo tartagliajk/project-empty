@@ -34,8 +34,6 @@ namespace Empty
                             Console.WriteLine("Somehow the player still remembers how to create them.");
                             Console.WriteLine("The player looks at the creation.");
                             Console.WriteLine("Turns it...");
-
-
                             break;
                         }
                         if (tools.ToLower() == "village")

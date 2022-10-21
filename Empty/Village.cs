@@ -20,21 +20,20 @@ namespace Empty
             Console.WriteLine("A roof over the head.");
             Console.WriteLine("Night.");
             Console.WriteLine("Quietness, darkness, stars that sparkle.");
-            Console.WriteLine("...\n...\n...");
+            Console.Read();
             Console.WriteLine("Sunrise.");
             Console.WriteLine("The player stands.");
             Console.WriteLine("The village bell starts to ring.");
             Console.WriteLine("r i n g   r i n g");
             Console.WriteLine("Villagers walk out from the house.");
             Console.WriteLine("Ready to work, ready to repeat their daily chores.");
-
             Console.Write("Does the player go to the weapon smith or the archer range? [Smith / Range]\n>");
             while (true)
             {
                 smith_range = Console.ReadLine();
                 if (smith_range.ToLower() == "range")
                 {
-                    Console.WriteLine("steps. steps. steps.");
+                    Console.WriteLine("\nsteps. steps. steps.");
                     Console.WriteLine("Bow meets air.");
                     Console.WriteLine("Tsurune.");
                     Console.WriteLine("The player hears the arrow being released.");
@@ -42,19 +41,18 @@ namespace Empty
                     Console.WriteLine("The villager says something.");
                     Console.WriteLine("Words that don't mean anything.");
                     Console.WriteLine("The player points at the…");
-
                     Console.Write("Bow or Crossbow?\n>");
                     while (true)
                     {
                         weapon = Console.ReadLine();
                         if (weapon.ToLower() == "bow")
                         {
-                            Console.WriteLine("\nQuick.\nEasy to use.\nPrecise.\n");
+                            Console.WriteLine("\nQuick.\nEasy to use.\nPrecise.");
                             break;
                         }
                         if (weapon.ToLower() == "crossbow")
                         {
-                            Console.WriteLine("\nSlow.\nuntrustworthy.\n");
+                            Console.WriteLine("\nSlow.\nuntrustworthy.");
                             break;
                         }
                     }
@@ -62,7 +60,7 @@ namespace Empty
                 }
                 if (smith_range.ToLower() == "smith")
                 {
-                    Console.WriteLine("steps. steps. steps.");
+                    Console.WriteLine("\nsteps. steps. steps.");
                     Console.WriteLine("Metal meets metal.");
                     Console.WriteLine("The player hears loud clings.");
                     Console.WriteLine("The villager says something.");
@@ -75,18 +73,19 @@ namespace Empty
                         weapon = Console.ReadLine();
                         if (weapon.ToLower() == "sword")
                         {
-                            Console.WriteLine("\nSharp.\nHandle.\nEasy to cut.\nBut yet so weak.\n");
+                            Console.WriteLine("\nSharp.\nHandle.\nEasy to cut.\nBut yet so weak.");
                             break;
                         }
                         if (weapon.ToLower() == "axe")
                         {
-                            Console.WriteLine("\nHeavy.\nSlow.\nGreat damage.\n");
+                            Console.WriteLine("\nHeavy.\nSlow.\nGreat damage.");
                             break;
                         }
                     }
                     break;
                 }
             }
+            Console.Read();
             Console.WriteLine("The villager points towards the city centre.");
             Console.WriteLine("Tall purple portal.");
             Console.WriteLine("It’s secured.");
@@ -95,6 +94,7 @@ namespace Empty
             Console.WriteLine("The player runs towards the portal.");
             Console.WriteLine("Over the guards it goes.");
             Console.WriteLine("Into the portal it goes.");
+            Console.Read();
         }
     }
 }

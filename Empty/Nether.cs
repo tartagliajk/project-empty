@@ -8,9 +8,9 @@ namespace Empty
 {
     internal class Nether
     {
-        static string chests_near_spawner;
+        static string chests_spawner;
         static string chests_return;
-        static string lava_dig;
+        static string option;
         public static void room()
         {
             Console.WriteLine("------------------------------------------------------------------------------");
@@ -23,12 +23,11 @@ namespace Empty
             Console.WriteLine("The player crosses the lava.");
             Console.WriteLine("A building.");
             Console.WriteLine("Two ways.");
-
-            Console.Write("Does the player want to go to the spawner or explore chests? [Spawner / Chests]\n>");
+            Console.WriteLine("Does the player want to go to the spawner or explore chests? [Spawner / Chests]\n>");
             while (true)
             {
-                chests_near_spawner = Console.ReadLine();
-                if (chests_near_spawner.ToLower() == "spawner")
+                chests_spawner = Console.ReadLine();
+                if (chests_spawner.ToLower() == "spawner")
                 {
                     Spawner.fight();
                     Console.Write("Does the player want to explore the chestroom or return back? [Chests / Return]\n>");
@@ -47,7 +46,7 @@ namespace Empty
                     }
                     break;
                 }
-                if (chests_near_spawner.ToLower() == "chests")
+                if (chests_spawner.ToLower() == "chests")
                 {
                     Chest_Room();
                     Console.WriteLine("Still in need of the powder, the player walks towards the spawner.");
@@ -55,22 +54,21 @@ namespace Empty
                     break;
                 }
             }
-            Console.Write("\nDoes it bridge over the lava or does the player dig its way through? [Lava / Dig]\n>");
+            Console.WriteLine("Does it bridge over the lava or does the player dig its way through? [Lava / Dig]\n>");
             while (true)
             {
-                lava_dig = Console.ReadLine();
-                if (lava_dig.ToLower() == "lava")
+                option = Console.ReadLine();
+                if (option.ToLower() == "lava")
                 {
                     Console.WriteLine("One block, Two blocks, Three blocks, Four blocks.");
                     Console.WriteLine("Misplaced.");
                     Console.WriteLine("It falls from its own creation.");
                     Console.WriteLine("“Failure” it thought as the lava wrapped around it.");
-                    Console.WriteLine("“Back to black”.");
-
+                    Console.WriteLine("“Back to black”");
                     Death.message();
                     break;
                 }
-                if (lava_dig.ToLower() == "dig")
+                if (option.ToLower() == "dig")
                 {
                     Console.WriteLine("\nOne block, Two blocks, Three blocks, Four blocks.");
                     Console.WriteLine("The smell of ash made it hard to breathe in the limited area.");
@@ -107,10 +105,11 @@ namespace Empty
         }
         static void Chest_Room()
         {
-            Console.WriteLine("Chestroom.");
+            Console.WriteLine("\nChestroom.");
             Console.WriteLine("The player finds gold, diamonds, rubies, emeralds etc.");
             Console.WriteLine("But nothing useful");
             Console.WriteLine("So it puts everything back.");
+            Console.Read();
         }
     }
 }
